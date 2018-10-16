@@ -5,6 +5,8 @@ sudo mv /var/lib/apt/lists/* /tmp
 sudo mkdir -p /var/lib/apt/lists/partial
 sudo apt-get clean
 sudo apt-get update
+dpkg --purge --force-depends ca-certificates-java
+apt-get install ca-certificates-java
 
 # install Clojure's build tool: leiningen
 echo "================= Install clojure's build tool: leiningen ==================="
